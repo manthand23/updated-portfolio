@@ -6,7 +6,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Property Recommendation System",
-      description: "Built to solve the challenge of finding accurate real estate comparables, this system transforms raw property data into intelligent recommendations. The application tackles the problem of time-consuming manual property analysis by automating the process through advanced machine learning techniques.",
+      description: "A notebook-integrated real estate tool that uses NLP, regex-based parsing, and an XGBoost model to recommend top comparable properties. Built with FastAPI, React, and Docker, the app features a clean UI and modular backend, offering accurate, responsive predictions.",
       highlights: [
         "Improved data parsing accuracy by 32% through pandas-powered preprocessing",
         "Built responsive TypeScript interfaces with optimized state management",
@@ -20,7 +20,7 @@ const Projects = () => {
     },
     {
       title: "AI Voice Assistant",
-      description: "Developed to address the need for hands-free computing interaction, this voice assistant provides natural language command processing with minimal latency. The project solves accessibility challenges while demonstrating the potential of conversational AI interfaces.",
+      description: "A real-time voice assistant powered by GPT-3.5 and ElevenLabs, delivering lifelike TTS and natural language understanding. Built in TypeScript with Tailwind CSS and Vite for snappy performance across devices.",
       highlights: [
         "Reduced command response latency by ~30% through efficient frontend optimization",
         "Handled 150+ unique user queries in testing scenarios",
@@ -34,7 +34,7 @@ const Projects = () => {
     },
     {
       title: "WorkoutAI",
-      description: "Created to address the problem of improper exercise form and lack of real-time feedback during workouts. This AI-powered trainer uses computer vision to analyze exercise posture and provide immediate corrections, helping users avoid injuries and maximize workout effectiveness.",
+      description: "An AI-powered React app that gives real-time feedback on workout form using a TensorFlow CNN. Created to aid people improve their form and prevent injuries.",
       highlights: [
         "Achieved 92% accuracy in exercise posture detection using TensorFlow CNN",
         "Trained model on 200+ diverse exercise images",
@@ -48,7 +48,7 @@ const Projects = () => {
     },
     {
       title: "Anesthesia Pocket Guide",
-      description: "Designed to solve the challenge of quick access to critical anesthesia information in medical settings. This mobile application addresses the need for portable, reliable medical reference tools that can improve efficiency and accuracy in healthcare environments.",
+      description: "A mobile learning app designed to support medical students with visual guides, quizzes, and key anesthesiology calculators.",
       highlights: [
         "Conducted user study with 30 medical students showing 15% efficiency improvement",
         "Integrated 5 essential medical calculators for anesthetists",
@@ -67,9 +67,9 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="text-primary">Projects</span>
+            My <span className="text-blue-600 dark:text-blue-400">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Here are some of the projects I've worked on, showcasing my skills in full-stack development, 
             AI/ML, and problem-solving.
@@ -80,12 +80,12 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-card rounded-2xl border border-border p-8 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+              className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] hover:border-blue-300 dark:hover:border-blue-500"
             >
               <div className="flex flex-col lg:flex-row gap-8">
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-primary">
+                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                       {project.title}
                     </h3>
                     <div className="flex gap-2">
@@ -93,9 +93,9 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors"
+                        className="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                       >
-                        <Github size={20} className="text-muted-foreground" />
+                        <Github size={20} className="text-slate-600 dark:text-slate-300" />
                       </a>
                     </div>
                   </div>
@@ -115,17 +115,17 @@ const Projects = () => {
                     </div>
                   )}
                   
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
                     {project.description}
                   </p>
                   
                   {project.highlights && (
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold mb-3">Key Achievements:</h4>
+                      <h4 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Key Achievements:</h4>
                       <ul className="space-y-2">
                         {project.highlights.map((highlight, i) => (
-                          <li key={i} className="text-muted-foreground flex items-start gap-2">
-                            <span className="text-primary mt-1">•</span>
+                          <li key={i} className="text-slate-600 dark:text-slate-300 flex items-start gap-2">
+                            <span className="text-blue-600 dark:text-blue-400 mt-1">•</span>
                             {highlight}
                           </li>
                         ))}
@@ -135,13 +135,13 @@ const Projects = () => {
                 </div>
                 
                 <div className="lg:w-80">
-                  <div className="bg-muted/50 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-4">Technologies Used</h4>
+                  <div className="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-4 text-slate-800 dark:text-slate-200">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span 
                           key={i}
-                          className="px-3 py-1 bg-background text-foreground rounded-full text-sm border border-border"
+                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm border border-blue-200 dark:border-blue-700"
                         >
                           {tech}
                         </span>
