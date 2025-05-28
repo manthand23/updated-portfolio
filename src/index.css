@@ -14,24 +14,24 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 37 99 235;
-    --primary-foreground: 248 250 252;
+    --primary: 59 130 246;
+    --primary-foreground: 255 255 255;
 
     --secondary: 241 245 249;
     --secondary-foreground: 15 23 42;
 
-    --muted: 241 245 249;
+    --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 241 245 249;
-    --accent-foreground: 15 23 42;
+    --accent: 239 246 255;
+    --accent-foreground: 37 99 235;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 37 99 235;
+    --ring: 59 130 246;
 
     --radius: 0.5rem;
 
@@ -42,7 +42,7 @@
     --sidebar-accent: 241 245 249;
     --sidebar-accent-foreground: 15 23 42;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 37 99 235;
+    --sidebar-ring: 59 130 246;
   }
 
   .dark {
@@ -65,7 +65,7 @@
     --muted-foreground: 148 163 184;
 
     --accent: 30 41 59;
-    --accent-foreground: 248 250 252;
+    --accent-foreground: 96 165 250;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
@@ -131,7 +131,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e2e8f0;
+  background: #f1f5f9;
 }
 
 .dark ::-webkit-scrollbar-track {

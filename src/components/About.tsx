@@ -38,7 +38,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center gap-4 text-muted-foreground">
                   <MapPin className="text-primary" size={20} />
-                  <span>London, Ontario, Canada</span>
+                  <span>Greater Toronto Area, Ontario, Canada</span>
                 </div>
                 <div className="flex items-center gap-4 text-muted-foreground">
                   <Calendar className="text-primary" size={20} />
