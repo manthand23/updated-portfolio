@@ -14,14 +14,14 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 59 130 246;
+    --primary: 37 99 235;
     --primary-foreground: 255 255 255;
 
     --secondary: 241 245 249;
     --secondary-foreground: 15 23 42;
 
     --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
+    --muted-foreground: 71 85 105;
 
     --accent: 239 246 255;
     --accent-foreground: 37 99 235;
@@ -31,7 +31,7 @@
 
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 59 130 246;
+    --ring: 37 99 235;
 
     --radius: 0.5rem;
 
@@ -42,7 +42,7 @@
     --sidebar-accent: 241 245 249;
     --sidebar-accent-foreground: 15 23 42;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 59 130 246;
+    --sidebar-ring: 37 99 235;
   }
 
   .dark {
