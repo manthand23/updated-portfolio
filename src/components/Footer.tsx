@@ -49,8 +49,8 @@ const Footer = () => {
           </div>
           
           <div className="border-t border-gray-200 dark:border-gray-700 pt-8 animate-fade-in animation-delay-1000">
-            <p className="text-gray-700 dark:text-gray-300 transform transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
-              Made by <span className="font-bold text-blue-600 dark:text-blue-400">MD</span>
+            <p className="text-gray-700 dark:text-gray-300 transform transition-all duration-300 hover:scale-105">
+              Made by Manthan Desai
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
               © 2025 All rights reserved.
