@@ -100,7 +100,7 @@ const Header = () => {
               Contact
             </button>
             <a 
-              href="/resume.pdf" 
+              href="/src/components/Resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-300 flex items-center gap-2 w-fit"
