@@ -59,7 +59,7 @@ const Header = () => {
               {theme === 'dark' ? <Sun size={20} className="text-gray-700 dark:text-gray-300" /> : <Moon size={20} className="text-gray-700 dark:text-gray-300" />}
             </button>
             <a 
-              href="/resume.pdf" 
+              href="/src/components/resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center gap-2 pulse-glow"
