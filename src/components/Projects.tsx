@@ -63,14 +63,21 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="projects" className="py-20 bg-white dark:bg-black relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full animate-float"></div>
+        <div className="absolute top-1/2 right-20 w-20 h-20 bg-blue-400 rounded-full animate-float animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/3 w-16 h-16 bg-blue-600 rounded-full animate-float animation-delay-1000"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white">
             My <span className="text-blue-600 dark:text-blue-400">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6 animate-slide-up animation-delay-500"></div>
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto animate-fade-in animation-delay-1000">
             Here are some of the projects I've worked on, showcasing my skills in full-stack development, 
             AI/ML, and problem-solving.
           </p>
@@ -80,12 +87,13 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] hover:border-blue-300 dark:hover:border-blue-500"
+              className="bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-xl transition-all duration-500 transform hover:scale-[1.02] hover:border-blue-300 dark:hover:border-blue-500 animate-fade-in hover-lift"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex flex-col lg:flex-row gap-8">
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 transform transition-all duration-300 hover:scale-105">
                       {project.title}
                     </h3>
                     <div className="flex gap-2">
@@ -93,21 +101,21 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                        className="p-2 bg-white dark:bg-black rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-gray-200 dark:border-gray-700"
                       >
-                        <Github size={20} className="text-slate-600 dark:text-slate-300" />
+                        <Github size={20} className="text-gray-700 dark:text-gray-300" />
                       </a>
                     </div>
                   </div>
                   
                   {project.date && (
-                    <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center gap-1 animate-bounce-in animation-delay-500">
                         <Calendar size={16} />
                         <span>{project.date}</span>
                       </div>
                       {project.duration && (
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1 animate-bounce-in animation-delay-1000">
                           <Clock size={16} />
                           <span>{project.duration}</span>
                         </div>
@@ -115,17 +123,17 @@ const Projects = () => {
                     </div>
                   )}
                   
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                     {project.description}
                   </p>
                   
                   {project.highlights && (
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Key Achievements:</h4>
+                      <h4 className="text-lg font-semibold mb-3 text-black dark:text-white">Key Achievements:</h4>
                       <ul className="space-y-2">
                         {project.highlights.map((highlight, i) => (
-                          <li key={i} className="text-slate-600 dark:text-slate-300 flex items-start gap-2">
-                            <span className="text-blue-600 dark:text-blue-400 mt-1">•</span>
+                          <li key={i} className="text-gray-700 dark:text-gray-300 flex items-start gap-2 transform transition-all duration-300 hover:translate-x-2">
+                            <span className="text-blue-600 dark:text-blue-400 mt-1 animate-pulse">•</span>
                             {highlight}
                           </li>
                         ))}
@@ -135,13 +143,14 @@ const Projects = () => {
                 </div>
                 
                 <div className="lg:w-80">
-                  <div className="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-4 text-slate-800 dark:text-slate-200">Technologies Used</h4>
+                  <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-800 transform transition-all duration-300 hover:scale-105">
+                    <h4 className="text-lg font-semibold mb-4 text-black dark:text-white">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span 
                           key={i}
-                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm border border-blue-200 dark:border-blue-700"
+                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm border border-blue-200 dark:border-blue-700 transform transition-all duration-300 hover:scale-110 hover:bg-blue-200 dark:hover:bg-blue-800/50"
+                          style={{ animationDelay: `${i * 0.1}s` }}
                         >
                           {tech}
                         </span>
